@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { UserService } from "../../services/user";
+import "./login.css";
 
 interface loginState { email: string, password: string, login_pending: boolean };
 
@@ -28,16 +29,18 @@ export class LoginComponent extends React.Component<{}, loginState> {
     }
 
     render() {
-        return <div className="auth-form">
+        return <div className="auth">
             <h2>Login</h2>
             <form onSubmit={e => this.onSubmit(e)}>
-                <label> Email: 
-                    <input type="text" ref="login-email" placeholder="Email (name@domaincom)" onChange={e => this.setState({email: e.target.value})} />
-                </label>
-                <label> Password:
+                <div className="form-element">
+                    <span>Email:</span>
+                    <input type="text" ref="login-email" placeholder="Email (name@domain.com)" onChange={e => this.setState({email: e.target.value})} />
+                </div>
+                <div className="form-element">
+                    <span>Password:</span>
                     <input type="password" className="login-pass" placeholder="Password" onChange={e => this.setState({password: e.target.value})} />
-                </label>
-                <input type="submit" value="Submit" disabled={this.state.login_pending} />
+                </div>
+                <input type="submit" value="Sign In" disabled={this.state.login_pending} />
             </form>
             {
                 this.state.login_pending &&

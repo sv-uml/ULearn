@@ -100,7 +100,7 @@ body {
 	width: 300px;
 }
 
-.signup-action-container button {
+input[type="submit"], button {
 	background-color: #760FD6;
 	border: 1px solid #570aa0;
 	border-radius: 3px;
