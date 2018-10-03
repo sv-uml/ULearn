@@ -48,7 +48,7 @@ export class LoginComponent extends React.Component<{}, loginState> {
                     <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
                 </span>
             }
-            <span className="auth-switch">Don't have an account? <Link to="/signup">Register</Link></span>
+            <span className="auth-switch">Don't have an account? <Link to="/register">Register</Link></span>
         </div>
     }
 };

@@ -15,7 +15,7 @@ export class HeaderComponent extends React.Component {
                 </div>
                 <div className="header-links">
                     <Link to="/login" className="header-item">Sign In</Link>
-                    <Link to="/signup" className="header-item">Sign Up</Link>
+                    <Link to="/register" className="header-item">Sign Up</Link>
                 </div>
             </div>
         </nav>

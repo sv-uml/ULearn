@@ -6,7 +6,8 @@ export interface registerState {
     firstName: string, 
     lastName: string, 
     email: string, 
-    password: string 
+    password: string,
+    register_pending: boolean
 };
 
 export class RegisterComponent extends React.Component<{}, registerState> {
@@ -17,7 +18,8 @@ export class RegisterComponent extends React.Component<{}, registerState> {
             firstName: "", 
             lastName: "", 
             email: "",
-            password: ""
+            password: "",
+            register_pending: false
         };
         this.onSubmit = this.onSubmit.bind(this);
     }
@@ -34,19 +36,30 @@ export class RegisterComponent extends React.Component<{}, registerState> {
     }
 
     render() {
-        return <div className="auth-form signup">
-            <h2>Register</h2>
-            <span>Please enter your name and email. Then, choose a password.</span>
+        return <div className="auth">
+            <h2>Sign Up</h2>
             <form onSubmit={e => this.onSubmit(e)}>
-                <div className="auth-signup-name">
-                    <input type="text" ref="register-first-name" placeholder="First Name" onChange={e => this.setState({firstName: e.target.value})} />
-                    <input type="text" ref="register-last-name" placeholder="Last Name" onChange={e => this.setState({lastName: e.target.value})} />
+                <div className="form-element">
+                    <span>Name:</span>
+                    <input type="text" ref="login-email" placeholder="e.g. John Smith" onChange={e => this.setState({email: e.target.value})} />
                 </div>
-                <input type="email" className="register-email" placeholder="Email" onChange={e => this.setState({email: e.target.value})} />
-                <input type="password" className="register-pass" placeholder="Password" onChange={e => this.setState({password: e.target.value})} />
-                <input type="submit" value="Register" />
+                <div className="form-element">
+                    <span>Email:</span>
+                    <input type="text" ref="login-email" placeholder="Email (name@domain.com)" onChange={e => this.setState({email: e.target.value})} />
+                </div>
+                <div className="form-element">
+                    <span>Password:</span>
+                    <input type="password" className="login-pass" placeholder="Password" onChange={e => this.setState({password: e.target.value})} />
+                </div>
+                <input type="submit" value="Sign Up" disabled={this.state.register_pending} />
             </form>
-            <span className="auth-switch">Already have an account? <Link to="/login">Login</Link></span>
+            {
+                this.state.register_pending &&
+                <span className="auth-status-pending">
+                    <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                </span>
+            }
+            <span className="auth-switch">Already have an account? <Link to="/login">Sign In</Link></span>
         </div>
     }
 }
