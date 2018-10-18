@@ -1,16 +1,15 @@
 import * as React from "react";
-import { Switch } from "react-router-dom";
-import { Header } from "../components/global/Header";
-import { AppContainer } from "../components/AppContainer";
-import { UserService } from "../services/user";
-import { AppRoute, router } from "../components/global/Route";
+import { Route, Switch } from "react-router-dom";
+import { HeaderComponent } from "../components/global/Header";
+import { router } from "../components/global/Route";
+import "./layout.css";
 
 export const Content = () => (
     <div className="global-container" id="app_context">
         <div className="content">
             <div className="area">
                 {router.map((route, num) => (
-                    <AppRoute key={num} path={route.path} exact={route.exact} component={route.main} auth={route.auth} />
+                    <Route key={num} path={route.path} exact={route.exact} component={route.main} />
                 ))}
             </div>
             <footer>ULearn &copy; 2018</footer>
@@ -20,7 +19,7 @@ export const Content = () => (
 
 export const App = () => (
     <div className="root">
-        <Header />
+        <HeaderComponent />
         <Switch>
             <Content />
         </Switch>

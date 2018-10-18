@@ -50,7 +50,6 @@ export class Dropdown extends React.Component<dropdownProps, dropdownState> {
     }
 
     render() {
-        var items = this.renderItems();
         return <div className={"dropdown-container " + this.props.className}>
             <div className="dropdown-label" onClick={this.renderDropdown}>
                 <span className="dropdown-label-text option">{this.props.children}</span>

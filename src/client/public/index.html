@@ -3,11 +3,10 @@
   <head>
     <title>ULearn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
   </head>
   <body>
      <div id="app"></div>
-     <script type="text/javascript" src="/node_modules/react/umd/react.production.min.js"></script>
-     <script type="text/javascript" src="/node_modules/react-dom/umd/react-dom.production.min.js"></script>
-     <script type="text/javascript" src="/dist/app.js"></script>
+     <script src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   </body>
 </html>

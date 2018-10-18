@@ -3,32 +3,35 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "dependencies": {
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --mode=development --watch"
+  },
+  "author": "ulearn",
+  "devDependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/jwt-decode": "^2.2.1",
-    "@types/react": "^16.7.3",
+    "@types/react": "^16.7.6",
     "@types/react-dom": "^16.0.9",
-    "@types/react-redux": "^6.0.9",
     "@types/react-router": "^4.4.1",
     "@types/react-router-dom": "^4.3.1",
     "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^1.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "typescript": "^3.1.6",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "jwt-decode": "^2.2.0",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-redux": "^5.1.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "redux": "^4.0.1",
-    "source-map-loader": "^0.2.4",
-    "typescript": "^3.1.6",
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "start": "node_modules/.bin/webpack && node app.js"
+    "source-map-loader": "^0.2.4"
   }
 }

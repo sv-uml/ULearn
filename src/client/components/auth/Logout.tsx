@@ -1,13 +1,10 @@
 import * as React from "react";
-import { connect } from "react-redux";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { UserService } from "../../services/user";
 
-interface logoutProps extends RouteComponentProps<{}> {}
+export class LogoutComponent extends React.Component {
 
-class LogoutComponent extends React.Component<logoutProps, {}> {
-
-    constructor(props: logoutProps) {
+    constructor(props: {}) {
         super(props);
     }
 
@@ -20,5 +17,3 @@ class LogoutComponent extends React.Component<logoutProps, {}> {
         return "";
     }
 }
-
-export const Logout = withRouter(LogoutComponent);
