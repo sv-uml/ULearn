@@ -1,7 +1,13 @@
 html, body {
 	font-family: 'Roboto', sans-serif;
+	height: 100%;
 	margin: 0;
 	padding: 0;
+	width: 100%;
+}
+
+body {
+	background-color: #e2e3dd;
 }
 
 @font-face {
@@ -21,4 +27,53 @@ html, body {
 .container {
 	margin: 0 auto;
 	width: 1200px;
+}
+
+.front-page {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10rem;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+}
+
+.front-page .text-banner {
+	font-size: 18px;
+	width: 500px;
+}
+
+.front-page .text-banner h1 {
+	color: #333333;
+	font-size: 36px;
+	margin: 10px 0;
+}
+
+.front-page .diagram {
+	width: 500px;
+}
+
+.front-page .diagram .diagram-item {
+	align-items: baseline;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.front-page .diagram .diagram-icon {
+	border: 1px solid #333333;
+	border-radius: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+}
+
+.front-page .diagram .diagram-text {
+	margin-left: 10px;
+}
+
+footer {
+	margin-top: 15em;
+	text-align: center;
 }

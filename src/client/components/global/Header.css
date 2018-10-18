@@ -1,7 +1,4 @@
 nav.header {
-    background: #142b33;
-    border-bottom: 1px solid #dddddd;
-    color: #ffffff;
 	width: 100%;
 }
 
@@ -10,7 +7,6 @@ nav.header > .container {
 }
 
 nav.header .header-logo {
-    color: #ffffff;
     font-size: 18px;
     font-weight: 700;
 }
@@ -22,18 +18,18 @@ nav.header .header-links {
 }
 
 nav.header .header-item {
-    color: #ffffff;
+    color: #555555;
     display: block;
     padding: 15px;
     text-decoration: none;
 }
 
 nav.header .header-links > .header-item {
-    color: #bbbbbb;
+    color: #999999;
 }
 
 nav.header .header-links > .header-item:hover {
-    color: #ffffff;
+    color: #555555;
 }
 
 nav.header .links {

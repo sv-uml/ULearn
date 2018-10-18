@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { Dropdown, dropdownItem } from "../../misc/Dropdown";
 import "./Header.css";
 
 export class HeaderComponent extends React.Component {

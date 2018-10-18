@@ -5,15 +5,11 @@ import { router } from "../components/global/Route";
 import "./layout.css";
 
 export const Content = () => (
-    <div className="global-container" id="app_context">
-        <div className="content">
-            <div className="area">
-                {router.map((route, num) => (
-                    <Route key={num} path={route.path} exact={route.exact} component={route.main} />
-                ))}
-            </div>
-            <footer>ULearn &copy; 2018</footer>
-        </div>
+    <div className="container" id="app_context">
+        {router.map((route, num) => (
+            <Route key={num} path={route.path} exact={route.exact} component={route.main} />
+        ))}
+        <footer>ULearn &copy; 2018</footer>
     </div>
 );
 

@@ -25,6 +25,10 @@ module.exports = {
                         outputPath: "fonts/"
                     }
                 }]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [ "file-loader" ]
             }
         ]
     },
