@@ -1,4 +1,24 @@
 html, body {
+	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url("./assets/Roboto-Regular.woff2") format('woff2');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Roboto Bold'), local('Roboto-Bold'), url("./assets/Roboto-Bold.woff2") format('woff2');
+}
+
+.container {
+	margin: 0 auto;
+	width: 1200px;
 }

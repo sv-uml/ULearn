@@ -1,19 +1,22 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Dropdown, dropdownItem } from "../../misc/Dropdown";
+import "./Header.css";
 
 export class HeaderComponent extends React.Component {
-
     constructor(props: any) {
         super(props);
     }
 
     render() {
         return <nav className="header">
-            <Link to="/" className="navbar-brand header-logo">ULearn</Link>
-            <div className="options-container">
-                <div className="links">
-                    <Link to="/login" className="option">Sign In</Link><Link to="/signup" className="option">Sign Up</Link>
+            <div className="container">
+                <div className="header-logo">
+                    <Link to="/" className="navbar-brand header-item">ULearn</Link>
+                </div>
+                <div className="header-links">
+                    <Link to="/login" className="header-item">Sign In</Link>
+                    <Link to="/signup" className="header-item">Sign Up</Link>
                 </div>
             </div>
         </nav>

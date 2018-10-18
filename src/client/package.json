@@ -16,9 +16,11 @@
     "@types/react-router-dom": "^4.3.1",
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.4",
     "typescript": "^3.1.6",
+    "url-loader": "^1.1.2",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"

@@ -1,6 +1,6 @@
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: "./application.tsx",
@@ -15,7 +15,17 @@ module.exports = {
         rules: [
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-            { test: /\.css$/, use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader" ] }
+            { test: /\.css$/, use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader" ] },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]",
+                        outputPath: "fonts/"
+                    }
+                }]
+            }
         ]
     },
     plugins: [
@@ -29,14 +39,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
-            template: './public/index.html',
-            filename: 'index.html'
+            template: "./public/index.html",
+            filename: "index.html"
         })
     ],
     devServer: {
-        contentBase: './dist',
+        contentBase: "./dist",
         compress: true,
-        host: '0.0.0.0',
+        host: "0.0.0.0",
         port: 3003,
         historyApiFallback: true
     }
