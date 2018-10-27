@@ -1,5 +1,5 @@
 html, body {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -7,21 +7,28 @@ html, body {
 }
 
 body {
-	background-color: #e2e3dd;
+	background: linear-gradient(135deg, #AAAAAA 0%, #EEEEEE 25%, #EEEEEE 75%, #AAAAAA 100%);
 }
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 300;
+	src: local("Open Sans Light"), local("OpenSans-Light"), url("./assets/OpenSans-Light.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 400;
-	src: local('Roboto'), local('Roboto-Regular'), url("./assets/Roboto-Regular.woff2") format('woff2');
+	src: local("Open Sans Regular"), local("OpenSans-Regular"), url("./assets/OpenSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
-	font-family: 'Roboto';
+	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 700;
-	src: local('Roboto Bold'), local('Roboto-Bold'), url("./assets/Roboto-Bold.woff2") format('woff2');
+	src: local("Open Sans Bold"), local("OpenSans-Bold"), url("./assets/OpenSans-Bold.woff2") format("woff2");
 }
 
 .container {
@@ -50,6 +57,10 @@ body {
 	margin: 10px 0;
 }
 
+.front-page .text-banner .banner-description {
+	color: #444444;
+}
+
 .front-page .diagram {
 	width: 500px;
 }
@@ -71,6 +82,35 @@ body {
 
 .front-page .diagram .diagram-text {
 	margin-left: 10px;
+}
+
+.signup-action-container {
+	display: flex;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.signup-action-container input[type="text"] {
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 1px rgba(204, 204, 204, 0.75);
+	font-size: 15px;
+	outline: none;
+	padding: 15px;
+	width: 300px;
+}
+
+.signup-action-container button {
+	background-color: #760FD6;
+	border: 1px solid #570aa0;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 1px rgba(204, 204, 204, 1);
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 15px;
+	margin-left: 10px;
+	outline: none;
+	padding: 15px;
 }
 
 footer {

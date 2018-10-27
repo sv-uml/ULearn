@@ -36,9 +36,13 @@ export class HomeViewComponent extends React.Component<{}, IHomeState> {
         return <section className="front-page">
             <div className="text-banner">
                 <h1>Efficiently train your team</h1>
-                <span>ULearn helps you train your team through 
-                    rich content-creation tools, powerful course assesments
-                    and advanced analytics.</span>
+                <span className="banner-description">ULearn is a learning management system that helps you 
+                    train your team through rich content-creation tools, 
+                    powerful course assesments and advanced analytics.</span>
+                <div className="signup-action-container">
+                    <input type="text" placeholder="Email address" />
+                    <button>Sign up</button>
+                </div>
             </div>
             <div className="diagram">
                 <div className="diagram-item">
