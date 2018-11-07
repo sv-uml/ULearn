@@ -2,3 +2,4 @@
 src/client/node_modules
 src/client/dist
 src/client/package-lock.json
+package-lock.json
