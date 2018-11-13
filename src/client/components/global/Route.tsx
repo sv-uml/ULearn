@@ -1,5 +1,5 @@
 import * as React from "react";
-import { LoginComponent } from "../../components/auth/Login";
+import { Login } from "../../components/auth/Login";
 import { LogoutComponent } from "../../components/auth/Logout";
 import { RegisterComponent } from "../../components/auth/Register";
 import { HomeViewComponent } from "../../views/HomeView";
@@ -18,7 +18,7 @@ export const router: routerProps[] = [{
 {
     path: "/login",
     exact: false,
-    main: () => <LoginComponent />
+    main: () => <Login />
 },
 {
     path: "/register",
