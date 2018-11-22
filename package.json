@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --mode=development --watch"
+    "dev": "node_modules/.bin/webpack-dev-server --mode=development --watch",
+    "start": "node_modules/.bin/webpack && node app.js"
   },
   "author": "ulearn",
   "devDependencies": {
