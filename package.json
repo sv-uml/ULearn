@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "node_modules/.bin/webpack-dev-server --mode=development --watch",
+    "heroku-postbuild": "node_modules/.bin/webpack",
     "start": "node_modules/.bin/webpack && node app.js"
   },
   "author": "ulearn",
