@@ -7,7 +7,7 @@ module.exports = {
     output: {
         filename: "[chunkhash].js",
         path: __dirname + "/dist",
-        publicPath: "/"
+        publicPath: "/assets"
     },
     devtool: "source-map",
     resolve: { extensions: [".ts", ".tsx", ".js", ".json"] },
