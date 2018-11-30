@@ -1,4 +1,4 @@
-# Weekly Progress Report - Week 5
+# Weekly Progress Report - Week 7
 This week, application development was prioritized. Specifically, user authentication and state management using Redux was worked on.
 
 ## Thoughts

@@ -1,4 +1,4 @@
-# Weekly Progress Report - Week 5
+# Weekly Progress Report - Week 8
 This week, user authentication was prioritized. Once Redux/state management was put in place, adjusting application state became easier.
 
 ## Thoughts

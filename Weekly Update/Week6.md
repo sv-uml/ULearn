@@ -1,4 +1,4 @@
-# Weekly Progress Report - Week 5
+# Weekly Progress Report - Week 6
 This week, some changes were done to the application's routing mechanism.
 
 ## Thoughts
