@@ -12,7 +12,7 @@ As not enough time could be contributed, there were not any major problems encou
 No reading was done this week. There were multiple revisions of week-based folders.
 
 ## Solutions
-To account for unforseen changes, weekly folder structure was re-organized a number of times.
+To account for unforeseen changes, weekly folder structure was re-organized a number of times.
 
 ## New ideas
 No new ideas are planned at this time. Development of existing features is prioritized.
