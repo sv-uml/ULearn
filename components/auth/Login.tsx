@@ -41,14 +41,11 @@ class LoginComponent extends React.Component<loginProps, loginState> {
                 return;
             }
             UserService.saveToken(data.data.jwt);
-            UserService.getUser(UserService.getUserId()).then(res => {
-                // TODO: Log user in
-            });
         });
     }
 
     render() {
-        return <div className="container auth">
+        return <section className="container auth">
             <div className="login-form">
                 <Link to="/" className="login-header-item">ULearn</Link>
                 <div className="login-form-container">
@@ -93,7 +90,7 @@ class LoginComponent extends React.Component<loginProps, loginState> {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     }
 };
 

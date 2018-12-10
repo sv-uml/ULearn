@@ -1,5 +1,5 @@
 export const configVals = {
-    apiRoot: "/api/",
+    root: "https://ulearn-api.herokuapp.com",
     login: "login",
     events: "events",
     users: "users",

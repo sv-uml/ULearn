@@ -1,7 +1,6 @@
 .auth {
 	display: flex;
 	height: 100%;
-	margin-bottom: -18px;
 	margin-top: -54px;
 	width: 100%;
 }
@@ -33,6 +32,16 @@
 	text-align: center;
 }
 
+.auth .login-form .auth-switch a {
+	color: #3535d4;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.auth .login-form .auth-switch a:hover {
+	text-decoration: underline;
+}
+
 .auth .login-form h2 {
 	font-size: 25px;
 	font-weight: 400;
@@ -47,7 +56,7 @@
 
 .auth .login-banner {
 	align-items: center;
-	background-image: url("../../layout/assets/images/login_banner.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../layout/assets/images/login_banner.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
@@ -64,6 +73,14 @@
 	color: white;
 	font-size: 32px;
 	font-weight: 500;
+}
+
+.auth .login-banner .login-banner-infographic .diagram {
+	color: #ffffff;
+}
+
+.auth .login-banner .login-banner-infographic .diagram .diagram-icon {
+	border-color: #ffffff;
 }
 
 .auth form {
@@ -99,4 +116,8 @@
 
 .form-element ~ input[type="submit"] {
 	padding: 10px 15px;
+}
+
+.auth+footer {
+	color: #ffffff;
 }

@@ -1,4 +1,3 @@
-import * as React from "react";
 import * as JwtDecode from "jwt-decode";
 import axios from "axios";
 import { AxiosResponse, AxiosError } from "axios";
@@ -27,29 +26,24 @@ export class UserService {
      * @returns         Promise of type `AxiosResponse` containing the JWT authorization token.
      */
     public static async login(email: string, password: string): Promise<AxiosResponse> {
-        return axios.post(configVals.apiRoot + configVals.login, {
-            auth: {
-                "email": email,
-                "password": password
-            }
+        return axios.post(configVals.root + "/api/login", {
+            "email": email,
+            "password": password
         });
     }
 
     /**
      * Register user based on first name, last name, email and password
-     * @param firstName First name
-     * @param lastName  Last name
+     * @param name      Name
      * @param email     Email of user
      * @param password  Password
      * @returns         Promise of type `AxiosResponse` containing the name, password, email, user id and active status
      */
     public static async register(name: string, email: string, password: string): Promise<AxiosResponse> {
-        return axios.post(configVals.apiRoot + configVals.users, {
-            user: {
-                "name": name,
-                "email": email,
-                "password": password
-            }
+        return axios.post(configVals.root + "/api/register", {
+            "name": name,
+            "email": email,
+            "password": password
         });
     }
 
@@ -114,31 +108,5 @@ export class UserService {
                 Authorization: `Bearer ${UserService.getToken()}`
             }
         }
-    }
-
-    /**
-     * Retrieve information about a specific user.
-     * @param id        Id of the user
-     * @returns         `UserItem` object containing the user's first name, last name,
-     *                  email and ID. If the user is not found or an error occurs,
-     *                  a null object is returned.
-     */
-    public static async getUser(id: string): Promise<UserItem> {
-        return axios.get(configVals.apiRoot + configVals.users + "/" + id, UserService.getAuthenticationHeader()).then(res => {
-            if (res.status === 200) {
-                return {
-                    id: id,
-                    firstName: res.data.first_name,
-                    lastName: res.data.last_name,
-                    email: res.data.email
-                }
-            }
-        }).catch((ex: AxiosError) => {
-            if (ex.response && ex.response.status === 404) {
-                throw new InvalidIdError(id);
-            } else {
-                throw ex;
-            }
-        });
     }
 }

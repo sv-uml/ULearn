@@ -45,6 +45,10 @@ body {
 	width: 1200px;
 }
 
+nav.header+section.container {
+	margin-bottom: -25px;
+}
+
 .front-page {
 	align-items: center;
 	display: flex;

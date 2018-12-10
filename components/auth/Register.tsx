@@ -45,7 +45,7 @@ class RegisterComponent extends React.Component<{}, registerState> {
     }
 
     render() {
-        return <div className="container auth">
+        return <section className="container auth">
             <div className="login-form">
                 <Link to="/" className="login-header-item">ULearn</Link>
                 <div className="login-form-container">
@@ -94,7 +94,7 @@ class RegisterComponent extends React.Component<{}, registerState> {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     }
 };
 
