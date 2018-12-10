@@ -2,7 +2,7 @@ import * as React from "react";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { UserService } from "../../services/user";
 
-export class LogoutComponent extends React.Component {
+class LogoutComponent extends React.Component {
 
     constructor(props: {}) {
         super(props);
@@ -17,3 +17,5 @@ export class LogoutComponent extends React.Component {
         return "";
     }
 }
+
+export const Logout = LogoutComponent;

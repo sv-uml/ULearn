@@ -12,7 +12,7 @@ interface IHomeState {
     feedLoading: boolean
 }
 
-export class HomeViewComponent extends React.Component<{}, IHomeState> {
+class HomeViewComponent extends React.Component<{}, IHomeState> {
 
     constructor(props: {}) {
         super(props);
@@ -33,7 +33,7 @@ export class HomeViewComponent extends React.Component<{}, IHomeState> {
     }
 
     render() {
-        return <section className="front-page">
+        return <section className="container front-page">
             <div className="text-banner">
                 <h1>Efficiently train your team</h1>
                 <span className="banner-description">ULearn is a learning management system that helps you 
@@ -61,3 +61,5 @@ export class HomeViewComponent extends React.Component<{}, IHomeState> {
         </section>
     }
 }
+
+export const HomeView = HomeViewComponent;

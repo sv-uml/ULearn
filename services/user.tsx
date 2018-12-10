@@ -43,11 +43,10 @@ export class UserService {
      * @param password  Password
      * @returns         Promise of type `AxiosResponse` containing the name, password, email, user id and active status
      */
-    public static async register(firstName: string, lastName: string, email: string, password: string): Promise<AxiosResponse> {
+    public static async register(name: string, email: string, password: string): Promise<AxiosResponse> {
         return axios.post(configVals.apiRoot + configVals.users, {
             user: {
-                "first_name": firstName,
-                "last_name": lastName,
+                "name": name,
                 "email": email,
                 "password": password
             }

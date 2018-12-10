@@ -1,10 +1,17 @@
+import "./login.css";
 import * as React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { UserService } from "../../services/user";
 import { AuthState } from "../../misc/Auth";
 import { setState } from "../../misc/AppActions";
-import "./login.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faDesktop, faQuestion, faChartBar } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faDesktop);
+library.add(faQuestion);
+library.add(faChartBar);
 
 interface loginProps { login(args: AuthState): void };
 interface loginState { email: string, password: string, login_pending: boolean };
@@ -41,26 +48,51 @@ class LoginComponent extends React.Component<loginProps, loginState> {
     }
 
     render() {
-        return <div className="auth">
-            <h2>Login</h2>
-            <form onSubmit={e => this.onSubmit(e)}>
-                <div className="form-element">
-                    <span>Email:</span>
-                    <input type="text" ref="login-email" placeholder="Email (name@domain.com)" onChange={e => this.setState({email: e.target.value})} />
+        return <div className="container auth">
+            <div className="login-form">
+                <Link to="/" className="login-header-item">ULearn</Link>
+                <div className="login-form-container">
+                    <h2>Sign In</h2>
+                    <span>Please enter your email and password to continue.</span>
+                    <form onSubmit={e => this.onSubmit(e)}>
+                        <div className="form-element">
+                            <span>Email:</span>
+                            <input type="text" ref="login-email" placeholder="Email (name@domain.com)" onChange={e => this.setState({email: e.target.value})} />
+                        </div>
+                        <div className="form-element">
+                            <span>Password:</span>
+                            <input type="password" className="login-pass" placeholder="Password" onChange={e => this.setState({password: e.target.value})} />
+                        </div>
+                        <input type="submit" value="Sign In" disabled={this.state.login_pending} />
+                    </form>
+                    {
+                        this.state.login_pending &&
+                        <span className="auth-status-pending">
+                            <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                        </span>
+                    }
+                    <span className="auth-switch">Don't have an account? <Link to="/register">Register</Link></span>
                 </div>
-                <div className="form-element">
-                    <span>Password:</span>
-                    <input type="password" className="login-pass" placeholder="Password" onChange={e => this.setState({password: e.target.value})} />
+            </div>
+            <div className="login-banner">
+                <div className="login-banner-infographic">
+                    <h2>Workforce training made easy.</h2>
+                    <div className="diagram">
+                        <div className="diagram-item">
+                            <span className="diagram-icon"><FontAwesomeIcon icon="desktop" /></span>
+                            <span className="diagram-text">Create courses to train your team</span>
+                        </div>
+                        <div className="diagram-item">
+                            <span className="diagram-icon"><FontAwesomeIcon icon="question" /></span>
+                            <span className="diagram-text">Assess each participant's understanding</span>
+                        </div>
+                        <div className="diagram-item">
+                            <span className="diagram-icon"><FontAwesomeIcon icon="chart-bar" /></span>
+                            <span className="diagram-text">Analyze effectiveness of the course</span>
+                        </div>
+                    </div>
                 </div>
-                <input type="submit" value="Sign In" disabled={this.state.login_pending} />
-            </form>
-            {
-                this.state.login_pending &&
-                <span className="auth-status-pending">
-                    <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
-                </span>
-            }
-            <span className="auth-switch">Don't have an account? <Link to="/register">Register</Link></span>
+            </div>
         </div>
     }
 };
