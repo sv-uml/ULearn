@@ -45,7 +45,7 @@ body {
 	width: 1200px;
 }
 
-nav.header+section.container {
+section.container {
 	margin-bottom: -25px;
 }
 
@@ -123,5 +123,6 @@ input[type="submit"], button {
 }
 
 footer {
+	position: relative;
 	text-align: center;
 }

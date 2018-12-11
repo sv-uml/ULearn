@@ -1,5 +1,10 @@
 nav.header {
+	background-color: #ffffff;
 	width: 100%;
+}
+
+nav.header.guest {
+	background-color: transparent;
 }
 
 nav.header > .container {

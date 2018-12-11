@@ -1,8 +1,8 @@
 import "./Header.css";
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { AuthState, GlobalState } from "../../../misc/Auth";
 import { connect } from "react-redux";
+import { AuthState, GlobalState } from "../../../misc/Auth";
 import { Dropdown, dropdownItem } from "../../../misc/Dropdown";
 
 interface HeaderProps {
@@ -20,7 +20,7 @@ class HeaderComponent extends React.Component<HeaderProps, {}> {
             link: "/logout"
         }];
 
-        return <nav className="header">
+        return <nav className={"header " + (!this.props.authState.loggedIn && "guest")}>
             <div className="container">
                 <div className="header-logo">
                     <Link to="/" className="navbar-brand header-item">ULearn</Link>

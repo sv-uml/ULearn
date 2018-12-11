@@ -34,7 +34,7 @@ class HomeViewComponent extends React.Component<HomeViewProps, IHomeState> {
 
     componentWillMount() {
         if (this.props.authState.loggedIn) {
-            // Redirect user to home
+            this.props.history.push("/courses");
         }
     }
 

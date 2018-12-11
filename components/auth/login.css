@@ -1,8 +1,26 @@
 .auth {
-	display: flex;
 	height: 100%;
 	margin-top: -54px;
+	position: relative;
 	width: 100%;
+}
+
+.auth.auth-required {
+	height: calc(100% - 38px);
+	margin-bottom: 14px;
+}
+
+.auth .login-alert {
+    background-color: #ff0000;
+    color: #ffffff;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+}
+
+.auth .content-container {
+	display: flex;
+    height: 100%;
 }
 
 .auth .login-form {
