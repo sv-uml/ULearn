@@ -2,7 +2,7 @@
 import "./courses.css";
 import * as React from "react";
 import { connect } from "react-redux";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { GlobalState, AuthState } from "../../misc/Auth";
 import { CourseService } from "../../services/CourseService";
 import { ActionButton } from "../../misc/ActionButton";
@@ -19,6 +19,7 @@ interface courseListingState {
 class CourseListingComponent extends React.Component<courseListingProps, courseListingState> {
     constructor(props: any) {
         super(props);
+        this.state = { courses: [] }
     }
 
     componentWillMount() {
@@ -29,7 +30,18 @@ class CourseListingComponent extends React.Component<courseListingProps, courseL
 
     componentDidMount() {
         CourseService.getAll(this.props.authState.token).then(data => {
-            this.setState({ courses: data.data.courses });
+            let listing: JSX.Element[] = [];
+            let obj: any = {}
+            for (let i = 0; i < data.data.courses.length; i++) {
+                obj = (data.data.courses as any[])[i];
+                listing.push(<div className="listing-item">
+                    <div className="listing-item-title">
+                        <span>{obj.title}</span>
+                    </div>
+                    <div className="listing-item-desc">{obj.description}</div>
+                </div>)
+            }
+            this.setState({ courses: listing });
         })
     }
 
@@ -40,6 +52,7 @@ class CourseListingComponent extends React.Component<courseListingProps, courseL
                     <h2 className="title-label">Courses</h2>
                     <ActionButton label="Create course" link="/course/new" icon="plus" />
                 </div>
+                {this.state.courses}
             </div>
         </section>
     }

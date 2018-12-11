@@ -98,3 +98,24 @@ section.listing .listing-header {
     justify-content: space-between;
     width: 100%;
 }
+
+section.listing .listing-item {
+    border-bottom: 1px solid #eaeaea;
+    display: block;
+    padding: 10px 0;
+}
+
+section.listing .listing-item:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+section.listing .listing-item .listing-item-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+section.listing .listing-item .listing-item-title span:first-of-type {
+    font-size: 21px;
+}
