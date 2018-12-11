@@ -1,7 +1,7 @@
 import "./layout.css";
 import * as React from "react";
 import { Route, Switch } from "react-router-dom";
-import { HeaderComponent } from "../components/global/Header/Header";
+import { Header } from "../components/global/Header/Header";
 import { router } from "../misc/Route";
 
 export const Content = () => (
@@ -15,7 +15,7 @@ export const Content = () => (
 
 export const App = () => (
     <div className="root">
-        <HeaderComponent />
+        <Header />
         <Switch>
             <Content />
         </Switch>

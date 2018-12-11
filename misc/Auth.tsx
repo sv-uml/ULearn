@@ -6,11 +6,14 @@ export const AUTH_SET: string = "AUTH_SET";
 
 export interface AuthState {
     loggedIn?: boolean,
-    userId?: number,
-    firstName?: string,
-    lastName?: string,
-    email?: string
+    name?: string,
+    email?: string,
+    token?: string
 };
+
+export interface GlobalState {
+    auth: AuthState
+}
 
 export interface AuthAction {
     type: string,

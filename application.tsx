@@ -7,8 +7,8 @@ import { AppReducer } from "./misc/AppReducer";
 import { App } from "./layout/App";
 
 let localState: Object;
-if (localStorage.getItem("appState"))  {
-    localState = JSON.parse(localStorage.getItem('appState'));
+if (localStorage.getItem("state"))  {
+    localState = JSON.parse(localStorage.getItem("state"));
 } else {
     localState = {};
 }

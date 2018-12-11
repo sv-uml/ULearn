@@ -26,7 +26,7 @@ export const router: routerProps[] = [{
     main: () => <Register />
 },
 {
-    path: "/user/logout",
+    path: "/logout",
     exact: true,
     main: () => <Logout />
 }];

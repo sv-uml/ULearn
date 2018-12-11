@@ -1,23 +1,24 @@
 import "./login.css";
 import * as React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faDesktop, faQuestion, faChartBar, faSync } from "@fortawesome/free-solid-svg-icons";
 import { UserService } from "../../services/user";
 import { AuthState } from "../../misc/Auth";
 import { setState } from "../../misc/AppActions";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faDesktop, faQuestion, faChartBar } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faDesktop);
 library.add(faQuestion);
 library.add(faChartBar);
+library.add(faSync);
 
-interface loginProps { login(args: AuthState): void };
+interface loginProps { login(args: AuthState): void, history?: { push(path: string): any } };
 interface loginState { email: string, password: string, login_pending: boolean };
 
 class LoginComponent extends React.Component<loginProps, loginState> {
-    constructor(props: loginProps) {
+    constructor(props: any) {
         super(props);
         this.state = { email: "", password: "", login_pending: false };
         this.onSubmit = this.onSubmit.bind(this);
@@ -27,20 +28,19 @@ class LoginComponent extends React.Component<loginProps, loginState> {
         event.preventDefault();
         this.setState({ login_pending: true });
 
-        this.props.login({
-            loggedIn: true,
-            userId: 1,
-            firstName: "John",
-            lastName: "Smith",
-            email: "johnsmith@gmail.com"
-        });
-
         UserService.login(this.state.email, this.state.password).then((data) => {
-            if (data.status !== 201) {
+            if (data.status !== 200) {
                 alert("An error occurred while authenticating the user.");
                 return;
             }
-            UserService.saveToken(data.data.jwt);
+            this.props.login({
+                loggedIn: true,
+                name: data.data.name,
+                email: data.data.email,
+                token: data.data.token
+            });
+            this.setState({ login_pending: false });
+            this.props.history.push("/");
         });
     }
 
@@ -65,7 +65,7 @@ class LoginComponent extends React.Component<loginProps, loginState> {
                     {
                         this.state.login_pending &&
                         <span className="auth-status-pending">
-                            <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                            <FontAwesomeIcon icon="sync" spin={true} size="1x" />
                         </span>
                     }
                     <span className="auth-switch">Don't have an account? <Link to="/register">Register</Link></span>
@@ -102,4 +102,4 @@ const mapDispatchToProps = (dispatch: any) => {
     }
 };
 
-export const Login = connect(null, mapDispatchToProps)(LoginComponent);
+export const Login = connect(null, mapDispatchToProps)(withRouter(LoginComponent));
