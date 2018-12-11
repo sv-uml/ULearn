@@ -1,5 +1,5 @@
 export const configVals = {
-    root: "http://localhost:8080", // "https://ulearn-api.herokuapp.com",
+    root: "https://ulearn-api.herokuapp.com",
     login: "/api/login",
     register: "/api/register",
     events: "events",
