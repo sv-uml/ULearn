@@ -20,7 +20,7 @@ class HeaderComponent extends React.Component<HeaderProps, {}> {
             link: "/logout"
         }];
 
-        return <nav className={"header " + (!this.props.authState.loggedIn && "guest")}>
+        return <nav className={"header" + (!this.props.authState.loggedIn ? " guest" : "")}>
             <div className="container">
                 <div className="header-logo">
                     <Link to="/" className="navbar-brand header-item">ULearn</Link>

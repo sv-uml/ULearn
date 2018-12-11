@@ -58,7 +58,7 @@ class LoginComponent extends React.Component<loginProps & RouteProps, loginState
     }
 
     render() {
-        return <section className={"container auth " + (this.state.login_required && "auth-required")}>
+        return <section className={"container auth" + (this.state.login_required ? " auth-required" : "")}>
             { this.state.login_required && <div className="login-alert">The requested page requires you to be logged in.</div>}
             <div className="content-container">
                 <div className="login-form">

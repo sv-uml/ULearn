@@ -1,8 +1,9 @@
 
+import "./courses.css";
 import * as React from "react";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { GlobalState, AuthState } from "../../../misc/Auth";
+import { withRouter, Link } from "react-router-dom";
+import { GlobalState, AuthState } from "../../misc/Auth";
 
 interface courseListingProps {
     authState?: AuthState,
@@ -22,7 +23,7 @@ class CourseListingComponent extends React.Component<courseListingProps, {}> {
 
     render() {
         return <section className="container listing">
-        listing
+        <Link to="/course/new">Create new course</Link>
         </section>
     }
 };

@@ -3,7 +3,8 @@ import { Login } from "../components/auth/Login";
 import { Logout } from "../components/auth/Logout";
 import { Register } from "../components/auth/Register";
 import { HomeView } from "../views/HomeView";
-import { CourseListing } from "../components/courses/listing/CourseListing";
+import { CourseListing } from "../components/courses/CourseListing";
+import { NewCourse } from "../components/courses/NewCourse";
 
 interface routerProps {
     path: string,
@@ -35,4 +36,9 @@ export const router: routerProps[] = [{
     path: "/courses",
     exact: true,
     main: () => <CourseListing />
+},
+{
+    path: "/course/new",
+    exact: true,
+    main: () => <NewCourse />
 }];

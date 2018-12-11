@@ -47,29 +47,31 @@ class HomeViewComponent extends React.Component<HomeViewProps, IHomeState> {
     }
 
     render() {
-        return <section className="container front-page">
-            <div className="text-banner">
-                <h1>Efficiently train your team</h1>
-                <span className="banner-description">ULearn is a learning management system that helps you 
-                    train your team through rich content-creation tools, 
-                    powerful course assesments and advanced analytics.</span>
-                <div className="signup-action-container">
-                    <input type="text" placeholder="Email address" onChange={e => this.setState({email: e.target.value})} />
-                    <button onClick={() => this.introRegister()}>Sign up</button>
+        return <section className="front-page">
+            <div className="container">
+                <div className="text-banner">
+                    <h1>Efficiently train your team</h1>
+                    <span className="banner-description">ULearn is a learning management system that helps you 
+                        train your team through rich content-creation tools, 
+                        powerful course assesments and advanced analytics.</span>
+                    <div className="signup-action-container">
+                        <input type="text" placeholder="Email address" onChange={e => this.setState({email: e.target.value})} />
+                        <button onClick={() => this.introRegister()}>Sign up</button>
+                    </div>
                 </div>
-            </div>
-            <div className="diagram">
-                <div className="diagram-item">
-                    <span className="diagram-icon"><FontAwesomeIcon icon="desktop" /></span>
-                    <span className="diagram-text">Create courses to train your team</span>
-                </div>
-                <div className="diagram-item">
-                    <span className="diagram-icon"><FontAwesomeIcon icon="question" /></span>
-                    <span className="diagram-text">Assess each participant's understanding</span>
-                </div>
-                <div className="diagram-item">
-                    <span className="diagram-icon"><FontAwesomeIcon icon="chart-bar" /></span>
-                    <span className="diagram-text">Analyze effectiveness of the course</span>
+                <div className="diagram">
+                    <div className="diagram-item">
+                        <span className="diagram-icon"><FontAwesomeIcon icon="desktop" /></span>
+                        <span className="diagram-text">Create courses to train your team</span>
+                    </div>
+                    <div className="diagram-item">
+                        <span className="diagram-icon"><FontAwesomeIcon icon="question" /></span>
+                        <span className="diagram-text">Assess each participant's understanding</span>
+                    </div>
+                    <div className="diagram-item">
+                        <span className="diagram-icon"><FontAwesomeIcon icon="chart-bar" /></span>
+                        <span className="diagram-text">Analyze effectiveness of the course</span>
+                    </div>
                 </div>
             </div>
         </section>
