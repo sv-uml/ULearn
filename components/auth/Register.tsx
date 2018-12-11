@@ -87,7 +87,7 @@ class RegisterComponent extends React.Component<registerProps & RouteProps, regi
                         </form>
                         {
                             this.state.register_pending &&
-                            <span className="auth-status-pending">
+                            <span className="process-status-pending">
                                 <FontAwesomeIcon icon="sync" spin={true} size="1x" />
                             </span>
                         }

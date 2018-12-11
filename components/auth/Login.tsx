@@ -79,7 +79,7 @@ class LoginComponent extends React.Component<loginProps & RouteProps, loginState
                         </form>
                         {
                             this.state.login_pending &&
-                            <span className="auth-status-pending">
+                            <span className="process-status-pending">
                                 <FontAwesomeIcon icon="sync" spin={true} size="1x" />
                             </span>
                         }

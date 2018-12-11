@@ -4,13 +4,19 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 import { GlobalState, AuthState } from "../../misc/Auth";
+import { CourseService } from "../../services/CourseService";
+import { ActionButton } from "../../misc/ActionButton";
 
 interface courseListingProps {
     authState?: AuthState,
     history?: { push(path: string): any }
 }
 
-class CourseListingComponent extends React.Component<courseListingProps, {}> {
+interface courseListingState {
+    courses: any
+}
+
+class CourseListingComponent extends React.Component<courseListingProps, courseListingState> {
     constructor(props: any) {
         super(props);
     }
@@ -21,9 +27,20 @@ class CourseListingComponent extends React.Component<courseListingProps, {}> {
         }
     }
 
+    componentDidMount() {
+        CourseService.getAll(this.props.authState.token).then(data => {
+            this.setState({ courses: data.data.courses });
+        })
+    }
+
     render() {
-        return <section className="container listing">
-        <Link to="/course/new">Create new course</Link>
+        return <section className="listing">
+            <div className="container">
+                <div className="listing-header">
+                    <h2 className="title-label">Courses</h2>
+                    <ActionButton label="Create course" link="/course/new" icon="plus" />
+                </div>
+            </div>
         </section>
     }
 };

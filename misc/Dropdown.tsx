@@ -10,7 +10,6 @@ export interface dropdownItem {
 }
 
 interface dropdownProps {
-    className: string,
     items: dropdownItem[]
 }
 
@@ -41,16 +40,14 @@ export class Dropdown extends React.Component<dropdownProps, dropdownState> {
         let dropdownItems: JSX.Element[] = [];
         for (let i: number = 0; i < this.props.items.length; i++) {
             dropdownItems.push(
-            <div className="dropdown-item">
-                <Link to={this.props.items[i].link} onClick={() => {
-                }}>{this.props.items[i].label}</Link>
-            </div>);
+                <Link className="dropdown-item" to={this.props.items[i].link} onClick={() => {
+                }}>{this.props.items[i].label}</Link>);
         }
         return dropdownItems;
     }
 
     render() {
-        return <div className={"dropdown-container " + this.props.className}>
+        return <div className={"dropdown-container" + (this.state.dropdownOpen ? " open" : "")}>
             <div className="dropdown-label" onClick={this.renderDropdown}>
                 <span className="dropdown-label-text option">{this.props.children}</span>
             </div>

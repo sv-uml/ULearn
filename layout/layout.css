@@ -119,6 +119,43 @@ input[type="submit"], button {
 	padding: 15px;
 }
 
+
+.form-element {
+	display: flex;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.form-element > span {
+	padding: 10px;
+	min-width: 76px;
+}
+
+.form-element > input {
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 1px rgba(204, 204, 204, 0.75);
+	font-size: 15px;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-element > input:focus {
+	border-color: rgb(4, 146, 247);
+	box-shadow: 0px 0px 10px 1px rgba(4, 146, 247, 0.75);
+}
+
+.form-element ~ input[type="submit"] {
+	padding: 10px 15px;
+}
+
+.process-status-pending {
+	color: #bbbbbb;
+	margin-left: 96px;
+	margin-top: -30px;
+}
+
 footer {
 	padding: 10px;
 	position: relative;

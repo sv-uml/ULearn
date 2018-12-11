@@ -28,7 +28,7 @@ class HeaderComponent extends React.Component<HeaderProps, {}> {
                 <div className="header-links">
                     {
                         this.props.authState.loggedIn &&
-                        <Dropdown className="" items={items}>{this.props.authState.name}</Dropdown>
+                        <Dropdown items={items}>{this.props.authState.name}</Dropdown>
                     }
                     {
                         !this.props.authState.loggedIn &&
