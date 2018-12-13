@@ -1,15 +1,16 @@
-const webpack = require("webpack");
+import * as webpack from "webpack";
+import * as webpackDevServer from "webpack-dev-server";
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-module.exports = {
+const webpackConfig: webpack.Configuration = {
     entry: "./application.tsx",
     output: {
-        filename: "[chunkhash].js",
-        path: __dirname + "/dist",
-        publicPath: "/assets"
+        filename: "[hash].js",
+        path: __dirname + "/build",
+        publicPath: "./"
     },
-    devtool: "source-map",
     resolve: { extensions: [".ts", ".tsx", ".js", ".json"] },
     module: {
         rules: [
@@ -31,13 +32,14 @@ module.exports = {
                 use: [{
                     loader: "file-loader",
                     options: {
-                        outputPath: "/images/"
+                        outputPath: "images/"
                     }
                 }]
             }
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(["build"]),
         new webpack.ProvidePlugin({
             "React": "react",
             "ReactDOM": "react-dom",
@@ -50,13 +52,8 @@ module.exports = {
             hash: true,
             template: "./public/index.html",
             filename: "index.html"
-        })
-    ],
-    devServer: {
-        contentBase: "./dist",
-        compress: true,
-        host: "0.0.0.0",
-        port: 3003,
-        historyApiFallback: true
-    }
+        }),
+    ]
 }
+
+module.exports = webpackConfig;
