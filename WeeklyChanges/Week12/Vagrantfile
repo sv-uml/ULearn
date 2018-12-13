@@ -1,0 +1,22 @@
+$prov = <<-SCRIPT
+echo "Provisioning..."
+apt-get update -y
+apt-get upgrade -y
+apt-get install -y curl wget build-essential
+curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+apt-get install -y nodejs
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+apt-get update -y
+apt-get install -y yarn
+SCRIPT
+Vagrant.configure("2") do |config|
+  config.vagrant.plugins = "vagrant-fsnotify"
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.provision "shell", inline: $prov
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
+  config.vm.synced_folder ".", "/vagrant", fsnotify: true
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
+  end
+end

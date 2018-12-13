@@ -1,0 +1,121 @@
+section.course-new,
+section.listing {
+    background-color: #ffffff;
+    min-height: calc(100% - 93px);
+}
+
+section.course-new > .container,
+section.listing > .container {
+    padding-top: 25px;
+}
+
+section.course-new h2.title-label,
+section.listing h2.title-label {
+    color: #333333;
+    font-size: 27px;
+    font-weight: 300;
+    margin-top: 0px;
+}
+
+section.course-new h2.title-label {
+    border-left: 1px solid #bbb;
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 17px;
+}
+
+section.course-new form {
+	text-align: right;
+	width: 800px;
+}
+
+section.course-new form .form-element {
+    position: relative;
+}
+
+section.course-new form .form-element .course-input-hint {
+    background: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 16px;
+    left: 100%;
+    margin-left: 20px;
+    min-width: auto;
+    position: absolute;
+    text-align: left;
+    width: 380px;
+}
+
+section.course-new form .form-element .course-input-hint span {
+    margin-left: 10px;
+}
+
+section.course-new form .form-element > input {
+    box-shadow: none;
+}
+
+section.course-new form .form-element > textarea {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 150px;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+section.course-new form .form-element > span {
+    color: #666666;
+    font-size: 19px;
+    min-width: 111px;
+}
+
+section.course-new h2.section-label,
+section.listing h2.section-label {
+    color: #666666;
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 15px;
+    text-align: left;
+}
+
+section.course-new .react-datepicker__input-container input {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-size: 15px;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+section.course-new .process-status-pending {
+    display: block;
+}
+
+section.listing .listing-header {
+    display: flex;    
+    justify-content: space-between;
+    width: 100%;
+}
+
+section.listing .listing-item {
+    border-bottom: 1px solid #eaeaea;
+    display: block;
+    padding: 10px 0;
+}
+
+section.listing .listing-item:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
+
+section.listing .listing-item .listing-item-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+section.listing .listing-item .listing-item-title span:first-of-type {
+    font-size: 21px;
+}

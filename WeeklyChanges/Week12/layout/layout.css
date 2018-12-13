@@ -1,0 +1,163 @@
+html, body {
+	font-family: "Open Sans", sans-serif;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#app, #app .root {
+	background-color: #ffffff;
+	height: 100%;
+}
+
+#app_context {
+	height: calc(100% - 54px);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 300;
+	src: local("Open Sans Light"), local("OpenSans-Light"), url("./assets/fonts/OpenSans-Light.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Open Sans Regular"), local("OpenSans-Regular"), url("./assets/fonts/OpenSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Open Sans Bold"), local("OpenSans-Bold"), url("./assets/fonts/OpenSans-Bold.woff2") format("woff2");
+}
+
+.container {
+	height: 100%;
+	margin: 0 auto;
+	width: 1200px;
+}
+
+.front-page {
+	background: linear-gradient(135deg, #AAAAAA 0%, #EEEEEE 25%, #EEEEEE 75%, #AAAAAA 100%);
+	height: 100%;
+	justify-content: space-evenly;
+	margin-bottom: -38px;
+	margin-top: -54px;
+}
+
+.front-page > .container {
+	align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.front-page .text-banner {
+	font-size: 18px;
+	width: 500px;
+}
+
+.front-page .text-banner h1 {
+	color: #333333;
+	font-size: 36px;
+	margin: 10px 0;
+}
+
+.front-page .text-banner .banner-description {
+	color: #444444;
+}
+
+.diagram .diagram-item {
+	align-items: baseline;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.diagram .diagram-icon {
+	border: 1px solid #333333;
+	border-radius: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+}
+
+.diagram .diagram-text {
+	margin-left: 10px;
+}
+
+.signup-action-container {
+	display: flex;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.signup-action-container input[type="text"] {
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 1px rgba(204, 204, 204, 0.75);
+	font-size: 15px;
+	outline: none;
+	padding: 15px;
+	width: 300px;
+}
+
+input[type="submit"], button {
+	background-color: #760FD6;
+	border: 1px solid #570aa0;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 1px rgba(204, 204, 204, 1);
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 15px;
+	margin-left: 10px;
+	outline: none;
+	padding: 15px;
+}
+
+
+.form-element {
+	display: flex;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.form-element > span {
+	padding: 10px;
+	min-width: 76px;
+}
+
+.form-element > input {
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 1px rgba(204, 204, 204, 0.75);
+	font-size: 15px;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-element > input:focus {
+	border-color: rgb(4, 146, 247);
+	box-shadow: 0px 0px 10px 1px rgba(4, 146, 247, 0.75);
+}
+
+.form-element ~ input[type="submit"] {
+	padding: 10px 15px;
+}
+
+.process-status-pending {
+	color: #bbbbbb;
+	margin-left: 96px;
+	margin-top: -30px;
+}
+
+footer {
+	padding: 10px;
+	position: relative;
+	text-align: center;
+}
