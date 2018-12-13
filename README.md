@@ -23,7 +23,7 @@ Once the set up is complete, login to the Ubuntu-based environment by running `v
 
 Next, navigate to the source code folder:
 
-    cd /vagrant/src
+    cd /vagrant
 
 Install application dependencies using Yarn:
 
