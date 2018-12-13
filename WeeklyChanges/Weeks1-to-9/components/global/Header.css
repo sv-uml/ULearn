@@ -1,0 +1,85 @@
+nav.header {
+	width: 100%;
+}
+
+nav.header > .container {
+    display: flex;
+}
+
+nav.header .header-logo {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+nav.header .header-links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+nav.header .header-item {
+    color: #333333;
+    display: block;
+    padding: 15px;
+	text-decoration: none;
+}
+
+nav.header .header-links > .header-item {
+	color: #333333;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+nav.header .header-links > .header-item:hover {
+    color: #555555;
+}
+
+nav.header .links {
+	align-items: center;
+	color: #ffffff;
+	padding: 15px;
+}
+
+nav.header .links .option,
+nav.header .links div.dropdown {
+	color: inherit;
+	display: table-cell;
+	padding: 0 10px;
+	text-decoration: none;
+	width: auto;
+}
+
+nav.header .links .dropdown-container {
+	min-width: 91px;
+}
+
+.dropdown-container {
+	position: relative;
+}
+
+.dropdown-container .dropdown-label-text {
+	cursor: pointer;
+	display: block;
+	text-align: center;
+}
+
+.dropdown-container .dropdown-label-text {
+	cursor: pointer;
+	display: block;
+	text-align: center;
+}
+
+.dropdown-container .dropdown-content {
+	display: none;
+	position: absolute;
+}
+
+.dropdown-container .dropdown-content.open {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	display: block;
+	left: 0;
+	width: 100%;
+}
