@@ -1,4 +1,7 @@
 .DS_Store
 node_modules
 dist
+.vagrant
 package-lock.json
+ubuntu-xenial-16.04-cloudimg-console.log
+WeeklyChanges
