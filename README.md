@@ -33,4 +33,4 @@ Start the application:
 
     yarn start
 
-This will use `webpack-dev-server` to start the development server. Open your browser and type `http://localhost:8081/` to view the application.
+This will use `webpack-dev-server` to start the development server. Open your browser and type `http://localhost:8000/` to view the application.

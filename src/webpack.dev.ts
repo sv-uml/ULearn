@@ -5,11 +5,14 @@ const common = require("./webpack.config");
 const devConfig: webpack.Configuration = {
     mode: "development",
     devtool: "inline-source-map",
+    output: {
+        publicPath: "/"
+    },
     devServer: {
         contentBase: "./dist",
         compress: true,
         host: "0.0.0.0",
-        port: 8001,
+        port: 8000,
         historyApiFallback: true
     }
 };
