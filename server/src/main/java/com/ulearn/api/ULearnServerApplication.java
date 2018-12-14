@@ -23,7 +23,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Controller
 @SpringBootApplication
 @RequestMapping("/api")
-@CrossOrigin(origins = { "http://localhost:3003", "https://ulearn-uml.herokuapp.com" })
+@CrossOrigin(origins = { "http://weblab.cs.uml.edu" })
 public class ULearnServerApplication {
 	
 	@Autowired
