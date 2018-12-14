@@ -92,7 +92,7 @@ public class AppDao {
 				return pst;
 			}
 		}, holder);
-		return Integer.parseInt(String.valueOf(holder.getKeys().get("id")));
+		return Integer.parseInt(String.valueOf(holder.getKeys().get("last_insert_rowid()")));
 	}
 	
 	public List<Map<String, Object>> getAllCourses() {
