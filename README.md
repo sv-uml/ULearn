@@ -2,11 +2,13 @@
 A simple, easy-to-use Learning Management System (LMS) to manage employee training.
 
 ## Project Structure
-`src/`: Contains source code for ULearn
+`server/`: Contains source code for ULearn server
+
+`src/`: Contains source code for ULearn client
 
 `Weekly Update`: Contains progress reports for each week
 
-`WeeklyChanges`: Contains archive of source code as it stood in each week
+`WeeklyChanges`: Contains archive of client source code as it stood in each week
 
 
 ## How to build
