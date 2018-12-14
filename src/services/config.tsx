@@ -1,5 +1,5 @@
 export const configVals = {
-    root: "https://ulearn-api.herokuapp.com",
+    root: "http://weblab.cs.uml.edu/~sverma1/route.php",
     login: "/api/login",
     register: "/api/register",
     createCourse: "/api/course/create",
