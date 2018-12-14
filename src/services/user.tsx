@@ -18,14 +18,14 @@ export interface UserItem {
 export class UserService {
 
     public static async login(email: string, password: string): Promise<AxiosResponse> {
-        return axios.post(configVals.root + configVals.login, {
+        return axios.post(configVals.root + configVals.login + "&method=POST&token=a", {
             "email": email,
             "password": password
         });
     }
 
     public static async register(name: string, email: string, password: string): Promise<AxiosResponse> {
-        return axios.post(configVals.root + configVals.register, {
+        return axios.post(configVals.root + configVals.register + "&method=POST&token=a", {
             "name": name,
             "email": email,
             "password": password

@@ -5,7 +5,7 @@ import { configVals } from "./config";
 export class CourseService {
 
     public static async create(title: string, description: string, startDate: number, endDate: number, token: string): Promise<AxiosResponse> {
-        return axios.post(configVals.root + configVals.createCourse, {
+        return axios.post(configVals.root + configVals.createCourse + "&method=POST&token=" + token, {
             title,
             description,
             startDate,
@@ -18,7 +18,7 @@ export class CourseService {
     }
 
     public static async getAll(token: string): Promise<AxiosResponse> {
-        return axios.get(configVals.root + configVals.courses, {
+        return axios.get(configVals.root + configVals.courses + "&method=GET&token=" + token, {
             headers: {
                 "Authorization": token
             }
