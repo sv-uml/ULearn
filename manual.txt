@@ -1,0 +1,32 @@
+Saurabh Verma
+Internet and Web Systems I
+Project Manual
+
+About
+-----
+As stated in the README, the project is structured in the following manner:
+- /server: Contains source code for ULearn server (Java/Spring)
+- /src: Contains source code for ULearn client (JavaScript/ReachJS/Webpack)
+- /Weekly Update: Contains progress reports for each week
+- /WeeklyChanges: Contains archive of client source code as it stood in each week (Weeks 1-12)
+
+Usage instructions
+------------------
+1. Navigate to http://weblab.cs.uml.edu/~sverma1
+2. Click on "Sign Up" on the top right corner
+3. Enter a name, email and password for the new user account and click on the "Sign Up" button
+   - The system will register the user and redirect to the courses page
+4. Add a new course by clicking on the "Create course" button on the right side of the screen
+5. Enter a title, description, start date and end date for the course and click on the "Create" button
+   - The system will create the new course and redirect to the courses page
+6. The new course should show in the "Courses" page
+
+References/Works cited:
+- https://www.learninglight.com/enable-lms-ui-design/
+- https://www.litmos.com/blog/course-design/5-training-design-patterns-kickstart-new-lms
+- http://blog.learnamp.com/8-reasons-why-your-current-lms-is-missing-the-mark
+- https://theblog.adobe.com/4-golden-rules-ui-design/
+- https://react-redux.js.org/docs/introduction/quick-start
+- http://jasonwatmore.com/post/2017/09/16/react-redux-user-registration-and-login-tutorial-example
+- https://medium.com/quick-code/adding-authentication-to-react-redux-firebase-app-f0efcb1c519a
+- https://medium.com/codingthesmartway-com-blog/learn-redux-introduction-to-state-management-with-react-b87bc570b12a
