@@ -20,7 +20,7 @@ store.subscribe(() => {
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename={"/~sverma1"} >
             <App />
         </BrowserRouter>
     </Provider>,
