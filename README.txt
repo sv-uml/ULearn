@@ -7,6 +7,9 @@ I wrote all, non-dependency code for this project by myself. This project uses t
 
 Server:
 Spring framework - Framework used for building the backend server of ULearn
+JJWT - JSON Web Token generation/signing/verification library
+SQLite/PostgreSQL/Apache Commons DBCP - Database extension for Java
+Maven - Build tool
 
 Client:
 ReactJS - Library for building Single Page Application
