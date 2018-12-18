@@ -8,7 +8,7 @@ Academic honesty certification
 Although I did not use outside sources for the actual application logic itself, I have listed the 
 application dependencies (which includes frameworks/libraries). Other than the tools listed below, I wrote 
 all code for this project by myself. Server-side dependencies are managed through Maven and client-side 
-dependencies are managed through Node Package Managemer (NPM). This project uses the following third-party
+dependencies are managed through Yarn (Package manager for Node.js). This project uses the following third-party
 frameworks/libraries/tools:
 
 Global:
@@ -28,14 +28,15 @@ Server:
 
 Client:
 ------
-- ReactJS (as-is, dependency (JavaScript files) managed by NPM) - Library for building Single Page Application
-- FontAwesome (as-is, dependency (JavaScript files) managed by NPM) - Used for button icons
-- Redux (as-is, dependency (JavaScript files) managed by NPM) - Used for managing application state 
+- ReactJS (as-is, dependency (JavaScript files) managed by Yarn) - Library for building Single Page Application
+- FontAwesome (as-is, dependency (JavaScript files) managed by Yarn) - Used for button icons
+- Redux (as-is, dependency (JavaScript files) managed by Yarn) - Used for managing application state 
   (e.g. has the user logged in? what course sorting order do they prefer?)
-- Typescript (as-is, dependency (JavaScript files) managed by NPM) - Used to add a build/compile step in 
+- Typescript (as-is, dependency (JavaScript files) managed by Yarn) - Used to add a build/compile step in 
   the front-end development. This helped in quickly finding JavaScript-related errors
-- Webpack (as-is, dependency (JavaScript files) managed by NPM) - Bundling (combining) the final JavaScript 
+- Webpack (as-is, dependency (JavaScript files) managed by Yarn) - Bundling (combining) the final JavaScript 
   files in an efficient manner so the application loads quickly
+- Yarn (as-is, obtained from https://yarnpkg.com/en/)
 - Node.js (as-is, obtained from https://nodejs.org/en/download/)
 
 All of these dependencies are "general" dependencies which were used to simplify application 
