@@ -1,6 +1,10 @@
 # ULearn
 A simple, easy-to-use Learning Management System (LMS) to manage employee training.
 
+*The code in the following repository was merged into the `server` folder of this repository.*
+
+Server repository (old): https://github.com/sv-uml/ULearn-server
+
 ## Project Structure
 `server/`: Contains source code for ULearn server
 
