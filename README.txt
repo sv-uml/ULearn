@@ -11,6 +11,11 @@ all code for this project by myself. Server-side dependencies are managed throug
 dependencies are managed through Node Package Managemer (NPM). This project uses the following third-party
 frameworks/libraries/tools:
 
+Global:
+------
+- Vagrant (as-is, obtained from https://www.vagrantup.com) - Used to set up the development environment. This
+  "containerized" the development environment so it could be used across multiple systems.
+
 Server:
 ------
 - Spring framework (as-is, dependency (JAR libraries) managed by Maven) - Framework used for building the 
